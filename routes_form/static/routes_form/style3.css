@@ -1,0 +1,82 @@
+/* div {
+  display: block;
+} */
+
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+  position: absolute;
+  direction: ltr;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.nopadding {
+  padding-right: 0 !important;
+}
+
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%);
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.form-label {
+  font-size: 1em;
+}
+
+.navbar {
+  color: rgb(39, 39, 39);
+}
+
+.info-box {
+  /* position: absolute; */
+  margin: 20px;
+  width: 92%;
+  top: 0;
+  bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+}

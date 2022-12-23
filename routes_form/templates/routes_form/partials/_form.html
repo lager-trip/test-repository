@@ -1,0 +1,57 @@
+<nav id="sidebar" class="col-md-3 col-lg-3 d-md-block bg-light sidebar collapse nopadding" style="padding-right: 0">
+    <div class="position-sticky pt-3 sidebar-sticky">
+        <form method="post" class="nav flex-column">
+            {% csrf_token %}
+            {{ form.media.js }}
+
+            <div id="name_form" class="col-sm-9">
+                <label for="firstName" class="form-label">Route name</label>
+                {{ form.route_name }}
+            </div>
+            <div id="name_form" class="col-sm-10">
+                <label for="about" class="form-label">Tell about</label>
+                {{ form.about }}
+            </div>
+            <div>
+
+                <div class="col-md-10">
+                    <label for="Country">Country</label>
+                    {{form.country}}
+                    </select>
+                </div>
+                <div class="col-md-10">
+                    <label for="State">State</label>
+                    {{form.state}}
+                </div>
+                <div class="col-md-10">
+                    <label for="City">City</label>
+                    {{form.city}}
+                </div>
+
+                <div id="dificult_form" class="col-md-12">
+                    <label for="customRange1">Dificult level</label>
+                    <br>
+                    {{ form.lvl }}
+                </div>
+                <div id="distance_form" class="col-md-10">
+                    <label for="total_distance">Total distance</label>
+                    {{ form.total_distance }}
+                </div>
+                <div id="url_form" class="col-sm-9">
+                    <label for="url" class="form-label">URL</label>
+                    {{ form.url }}
+                </div>
+                <hr class="my-4">
+
+                <button type="submit" value="" class="btn btn-outline-primary me-2">Submit</button>
+
+                <div class="info-box">
+                    <p>
+                        Draw your route using the draw tools on the right. To get the most
+                        accurate route match, draw points at regular intervals.
+                    </p>
+                    <div id="directions"></div>
+                </div>
+        </form>
+    </div>
+</nav>
