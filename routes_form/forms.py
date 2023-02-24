@@ -14,16 +14,16 @@ class RouteForm(forms.ModelForm):
         self.fields['route_name'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Give a short name to the route'})
         self.fields['lvl'].widget.attrs.update(
-            {'class': 'slider col-md-10', 'id': 'customRange1', 'min': '1', 'max': '10'})
+            {'class': 'form-range col-md-10', 'min': '1', 'max': '10'})
         self.fields['lvl'].widget.input_type = 'range'
         self.fields['about'].widget.attrs.update(
             {'class': 'form-control', 'rows': '2'})
         self.fields['total_distance'].widget.attrs.update(
             {'class': 'form-control'})
         self.fields['country'].widget.attrs.update(
-            {'class': 'form-select', 'placeholder': 'Choose country'})
-        self.fields['state'].widget.attrs.update({'class': 'form-select'})
-        self.fields['city'].widget.attrs.update({'class': 'form-select'})
+            {'class': 'form-select form-control', 'placeholder': 'Choose country'})
+        self.fields['state'].widget.attrs.update({'class': 'form-select form-control'})
+        self.fields['city'].widget.attrs.update({'class': 'form-select form-control'})
 
         self.fields['url'].widget.attrs.update(
             {'class': 'form-control', 'id':'get-url',})

@@ -1,6 +1,6 @@
-/* div {
-  display: block;
-} */
+.bg-primary {
+  color: #2a2a2a!;
+}
 
 .chartjs-size-monitor,
 .chartjs-size-monitor-expand,
@@ -27,17 +27,21 @@
 }
 
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 100;
-  padding: 48px 0 0;
-  box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%);
+  padding: 0 0 0;
+}
+
+.form-check-input:checked {
+  background-color: #373833 !important;
+  border-color: #373833 !important;
 }
 
 .sidebar-sticky {
-  height: calc(100vh - 48px);
+  height: calc(90vh - 28px);
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -75,8 +79,179 @@ body {
 
 #map {
   position: absolute;
-  top: 40px;
+  top: 55px;
   bottom: 0;
   right: 0;
-  width: 75%;
+  width: 100%;
 }
+
+.rounded-rect {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 50px -25px black;
+}
+
+.flex-center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center.left {
+  left: 0px;
+}
+
+.flex-center.right {
+  right: 0px;
+}
+
+.sidebar-content {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  color: gray;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  width: 1.3em;
+  height: 1.3em;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-toggle.left {
+  right: -1.5em;
+}
+
+.sidebar-toggle:hover {
+  color: #fa2742;
+  cursor: pointer;
+}
+
+.sidebar {
+  transition: transform 1s;
+  z-index: 1;
+  width: 30%;
+  height: 100%;
+}
+
+/*
+  The sidebar styling has them "expanded" by default, we use CSS transforms to push them offscreen
+  The toggleSidebar() function removes this class from the element in order to expand it.
+  */
+.left.collapsed {
+  transform: translateX(-98%);
+}
+
+.nav-el {
+  margin: 10px;
+}
+
+.btn-outline-dark {
+  color: #fa2742 !important;
+  border-color: #fa2742 !important;
+}
+
+.btn-outline-dark:hover {
+  color: #ffffff !important;
+  background-color: #fa2742 !important;
+}
+
+.form-select,
+.form-control {
+  color: #000000 !important;
+  border-color: #fa2742 !important;
+  box-shadow: #fa2742 !important;
+}
+
+.form-control:focus {
+  border-color: #fa2742 !important;
+  outline: 0 !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fa2742 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fa2742 !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+select,
+select:focus {
+  outline: none !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #fa2742;
+  /* box-shadow: 0 0 0 2px #fa2743c1 !important; */
+  box-shadow: 0px 0px 7px 1px #373833;
+  -webkit-box-shadow: 0px 0px 7px 1px #373833;
+  -moz-box-shadow: 0px 0px 7px 1px #373833;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #373833;
+  box-shadow: 0px 0px 7px 1px #fa2742;
+  -webkit-box-shadow: 0px 0px 7px 1px #fa2742;
+  -moz-box-shadow: 0px 0px 7px 1px #fa2742;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  /* background-color: #373833; */
+  box-shadow: 0 0 0 2px #fa2743c1;
+  box-shadow: 0px 0px 7px 1px #fa2742;
+  -webkit-box-shadow: 0px 0px 7px 1px #fa2742;
+  -moz-box-shadow: 0px 0px 7px 1px #fa2742;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #fa2742;
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: #fa2742;
+}
+
+button {
+  border-color: #fa2742 !important;
+  color: #fa2742 !important;
+}
+
+button:hover {
+  border-color: #fa2742 !important;
+  background-color: #fa2742 !important;
+  color: #ffffff !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.form-label {
+  font-size: 0.5em !important;
+}
+
+.form-element {
+  margin-top: 1px !important;
+}
+
+.control-panel {
+  margin-left: 5px;
+}
+
+.navigation-item {
+  background-color: #373833;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  color: #fff !important;
+}
+
+.navigation-item:hover {
+  background-color: #fa2742 !important;
+  color: #fff !important;
+}
+

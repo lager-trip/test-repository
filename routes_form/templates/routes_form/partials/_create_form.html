@@ -1,0 +1,49 @@
+<nav id="navbar" class="nav nav-pills flex-column mb-auto col-md-12" style="padding-right: 0">
+    <div class="position-sticky pt-3 sidebar-sticky">
+        <form method="post" class="nav flex-column">
+            {% csrf_token %}
+            {{ form.media.js }}
+
+            <div id="name_form" class="form-element col-sm-10">
+                <label for="firstName" class="form-label">Route name</label>
+                {{ form.route_name }}
+            </div>
+            <div id="name_form" class="form-element col-sm-10">
+                <label for="about" class="form-label">Tell about</label>
+                {{ form.about }}
+            </div>
+            <div class="form-element col-md-10">
+                <label for="Country" class="form-label">Country</label>
+                {{form.country}}
+                </select>
+            </div>
+            <div class="form-element col-md-10">
+                <label for="State" class="form-label">State</label>
+                {{form.state}}
+            </div>
+            <div class="form-element col-md-10">
+                <label for="City" class="form-label">City</label>
+                {{form.city}}
+            </div>
+
+            <div id="dificult_form" class="form-element col-md-10">
+                <label for="slider" class="form-label">Dificult level</label>
+                <br>
+                {{ form.lvl }}
+            </div>
+
+            <div id="distance_form" class="form-element col-md-10">
+                <label for="total_distance" class="form-label">Total distance</label>
+                {{ form.total_distance }}
+            </div>
+            <div id="url_form" class="form-element col-sm-9" hidden>
+                <label for="url" class="form-label">URL</label>
+                {{ form.url }}
+            </div>
+            <hr class="my-4">
+
+            <button type="submit" value=""
+                class="btn btn-outline-primary me-2 col-md-10">Submit</button>
+        </form>
+    </div>
+</nav>

@@ -32,7 +32,8 @@ ALLOWED_HOSTS = [
     '2fc4-109-247-24-38.eu.ngrok.io',
     'b316-109-247-24-38.eu.ngrok.io',
     'fa0e-46-15-228-218.eu.ngrok.io',
-    'ebd2-109-247-24-38.eu.ngrok.io'
+    'ebd2-109-247-24-38.eu.ngrok.io',
+    '85b4-46-15-85-18.eu.ngrok.io'
 ]
 
 CSRF_TRUSTED_ORIGINS=[
@@ -45,6 +46,8 @@ CSRF_TRUSTED_ORIGINS=[
     'http://b316-109-247-24-38.eu.ngrok.io/',
     'https://b316-109-247-24-38.eu.ngrok.io/',
     'https://*.b316-109-247-24-38.eu.ngrok.io/',
+    'https://*.85b4-46-15-85-18.eu.ngrok.io/',
+    'https://85b4-46-15-85-18.eu.ngrok.io/'
 ]
 
 SECURE_PROXY_SSL_HEADER = ('b316-109-247-24-38.eu.ngrok.io', 'https')

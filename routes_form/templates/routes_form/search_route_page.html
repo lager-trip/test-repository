@@ -1,0 +1,10 @@
+{% extends 'routes_form/base.html' %}
+{% load static %}
+
+{% block content_form %} 
+{% include 'routes_form/partials/_search_form.html' %}
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'routes_form/searching_script.js' %}"></script>
+{% endblock %}

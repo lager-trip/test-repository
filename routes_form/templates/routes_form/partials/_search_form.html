@@ -1,0 +1,17 @@
+<ul class="nav nav-pills flex-column mb-auto col-md-10">
+    <li class="nav-el">
+        <label for="about" class="nav-el">Choose a route</label>
+        <select name="" id="select-route" class="form-select form-select-lg col-9">
+            {% for route in routes %}
+            <option value="{{route.id}}" id="">{{route.route_name}}</option>
+            {% endfor %}
+        </select>
+    </li>
+    <li class="nav-el">
+        <label for="about" class="nav-el">About:</label>
+        <p id="p-text" class="nav-el"></p>
+    </li>
+    <li class="nav-el">
+        <button type="button" id="sender" class="btn btn-outline-dark col-9">Search</button>
+    </li>
+</ul>
